@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto - Silla en Madera</title>
+    <link rel="stylesheet" href="Styles/ctg.css">
+    <link rel="stylesheet" href="xd.css">
+    <link rel="icon" href="images/logo_invertido.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Grey+Qo&family=Matemasie&family=Noto+Sans+JP:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-search">
+            <a href="index.html"> <img src="images/logo_iniciales.png" alt="logo" class="logo"></a>
+            <h4>Muebles Andrey</h4>
+            <div class="location-user">
+                <div class="location">
+                    <span>Estás comprando para</span>
+                    <span><strong>...</strong></span>
+                </div>
+                <div class="user-dropdown">
+                    <a href="auth/login.php"><img id="user-icon" src="images/icons8-user-32.png" alt="User Icon" class="user-icon"></a>
+                    <span class="account-text">Cuenta</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>¿Para qué ciudad vas a comprar?</h2>
+            <p>Te mostraremos los productos disponibles para la zona que selecciones.</p>
+            <form id="location-form">
+                <label for="departamento">Departamento</label>
+                <select id="departamento" onchange="actualizarCiudades()">
+                    <option value="">Selecciona un Departamento</option>
+                    <option value="ANTIOQUIA">Antioquia</option>
+                    <option value="ATLÁNTICO">Atlántico</option>
+                    <option value="BOLÍVAR">Bolívar</option>
+                    <option value="BOYACÁ">Boyacá</option>
+                    <option value="CALDAS">Caldas</option>
+                    <option value="CAUCA">Cauca</option>
+                    <option value="CESAR">Cesar</option>
+                    <option value="CÓRDOBA">Córdoba</option>
+                    <option value="CUNDINAMARCA">Cundinamarca</option>
+                    <option value="MAGDALENA">Magdalena</option>
+                    <option value="META">Meta</option>
+                    <option value="NARIÑO">Nariño</option>
+                    <option value="NORTE DE SANTANDER">Norte de Santander</option>
+                    <option value="RISARALDA">Risaralda</option>
+                    <option value="SANTANDER">Santander</option>
+                    <option value="SUCRE">Sucre</option>
+                    <option value="TOLIMA">Tolima</option>
+                    <option value="VALLE DEL CAUCA">Valle del Cauca</option>
+                </select>
+            
+                <label for="ciudad">Ciudad</label>
+                <select id="ciudad">
+                    <option value="">Selecciona una Ciudad</option>
+                </select>
+            
+                <button type="submit">Guardar Ubicación</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="product-details">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="main-product-image" src="images_ctg/D_NQ_NP_655928-MCO54766209176_032023-O.webp" alt="Silla en madera">
+            </div>
+            <div class="thumbnail-gallery">
+                <img class="thumbnail" src="images_ctg/D_NQ_NP_655928-MCO54766209176_032023-O.webp" alt="Silla en madera">
+                <img class="thumbnail" src="ctg_detalles/8d460b8953e1a85a4fe26005ba26d604.jpg" alt="Silla en madera">
+                <img class="thumbnail" src="ctg_detalles/images.jpeg" alt="Silla en madera">
+            </div>
+        </div>
+
+        <div class="product-info">
+
+            <!--Aqui se reciven los parametros para modificarsen-->
+            <h1 id="product-title">Título del Producto</h1>
+            <p id="new-price" class="new-price"></p>
+            <p id="old-price" class="old-price"></p>
+            <p id="discount" class="discount"></p>
+            <p id="description" class="description"></p> 
+            <p class="delivery-time">El tiempo de entrega es de 15 días hábiles aproximadamente.</p>
+
+            <div class="quantity-container">
+                <button class="quantity-btn" id="decrease-qty">-</button>
+                <input type="number" id="quantity" value="1" min="1">
+                <button class="quantity-btn" id="increase-qty">+</button>
+            </div>
+            <button class="add-to-cart-btn">Añadir al carrito</button>
+
+            <div class="wishlist-compare">
+                <button class="wishlist-btn">Añadir a la lista de deseos</button>
+                <button class="compare-btn">Comparar</button>
+            </div>
+
+            <p class="categories">Categorías: Sillas, Muebles de Madera</p>
+            <div class="share-icons">
+                <div>Compartir en:</div>
+                <a href="#"><img src="images/icons8-facebook-48.png" alt="Facebook"></a>
+                <a href="#"><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
+            </div>
+        </div>      
+    </section>
+
+    <section class="catalogo">
+        <h2>TAMBIÉN TE PUEDE INTERESAR</h2>
+        <p>Descubra nuestra propuesta integral de diseño interior, con productos accesibles para cada espacio de tu hogar</p>
+        <div class="productos">
+            <div class="producto" onclick="verDetalles('Silla en Madera')">
+                <div class="etiqueta oferta">Oferta</div>
+                <img src="images_ctg/D_NQ_NP_655928-MCO54766209176_032023-O.webp" alt="Silla en Madera">
+                <h3>Silla en Madera</h3>
+                <p class="precio-antiguo">$3.299.990</p>
+                <p class="precio">$1.999.990</p>
+                <p class="descuento">-39%</p>
+            </div>
+
+            <div class="producto" onclick="verDetalles('BaseCama Gris')">
+                <div class="etiqueta oferta">Oferta</div>
+                <img src="images_ctg/basecama-sublim-ambiente.webp" alt="BaseCama Gris">
+                <h3>BaseCama Gris</h3>
+                <p class="precio-antiguo">$399.990</p>
+                <p class="precio">$299.992</p>
+                <p class="descuento">-25%</p>
+            </div>
+
+            <div class="producto" onclick="verDetalles('Armario')">
+                <div class="etiqueta oferta">Oferta</div>
+                <img src="images_ctg/closet-armario-denver-aglomerado-moderno.webp" alt="Armario">
+                <h3>Armario</h3>
+                <p class="precio-antiguo">$799.990</p>
+                <p class="precio">$699.991</p>
+                <p class="descuento">-13%</p>
+            </div>
+
+            <div class="producto" onclick="verDetalles('Comedor')">
+                <div class="etiqueta personalizado">Marketplace</div>
+                <img src="images_ctg/images.jfif" alt="Comedor">
+                <h3>Comedor</h3>
+                <p class="precio-antiguo">$2.399.990</p>
+                <p class="precio">$1.559.990</p>
+                <p class="descuento">-35%</p>
+            </div>
+
+            <div class="producto" onclick="verDetalles('Juego de Sala')">
+                <div class="etiqueta oferta">Oferta</div>
+                <img src="images_ctg/JUEGO-DE-SALA-AZUL-TERCIOPELO-COMPLETOc-scaled.jpg" alt="Juego de Sala">
+                <h3>Juego de Sala</h3>
+                <p class="precio-antiguo">$999.990</p>
+                <p class="precio">$899.991</p>
+                <p class="descuento">-10%</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li><a href="#">Conócenos</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Vende con Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Sobre tus compras</h4>
+                <ul>
+                    <li><a href="#">Pagos</a></li>
+                    <li><a href="#">A Dónde Enviamos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Garantía</a></li>
+                    <li><a href="#">Política de Envío y Devolución</a></li>
+                    <li><a href="#">Derecho de Retracto</a></li>
+                    <li><a href="#">Política de Datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter-section">
+                <h4>Suscríbete a nuestro newsletter</h4>
+                <p>Conoce ya todas las sorpresas que tenemos para ti.</p>
+                <form action="#">
+                <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="back-to-top">
+            <button id="back-to-top" title="Volver arriba">⬆</button>
+        </div>
+    </footer>   
+    <script src="scripts/ctg.js"></script>
+</body>
+</html>

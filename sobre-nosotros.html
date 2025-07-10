@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&A</title>
+    <link rel="stylesheet" href="xd.css">
+    <link rel="icon" href="images/logo_invertido.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Grey+Qo&family=Matemasie&family=Noto+Sans+JP:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <div class="logo-search">
+           <a href="index.html"> <img src="images/logo_iniciales.png" alt="logo" class="logo"></a>
+            <h4>Muebles Andrey</h4>
+            <input type="search" placeholder="¿Cual es tu siguiente proyecto?" id="aña">
+            <div class="location-user">
+                <div class="location">
+                    <span>Estás comprando para</span>
+                    <span><strong>...</strong></span>
+                </div>
+                <div class="user-dropdown">
+                    <img id="user-icon" src="images/icons8-user-32.png" alt="User Icon" class="user-icon">
+                    <span class="account-text">Cuenta</span>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="location-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>¿Para qué ciudad vas a comprar?</h2>
+                <p>Te mostraremos los productos disponibles para la zona que selecciones.</p>
+                <form id="location-form">
+                    <label for="departamento">Departamento</label>
+                    <select id="departamento" onchange="actualizarCiudades()">
+                        <option value="">Selecciona un Departamento</option>
+                        <option value="ANTIOQUIA">Antioquia</option>
+                        <option value="ATLÁNTICO">Atlántico</option>
+                        <option value="BOLÍVAR">Bolívar</option>
+                        <option value="BOYACÁ">Boyacá</option>
+                        <option value="CALDAS">Caldas</option>
+                        <option value="CAUCA">Cauca</option>
+                        <option value="CESAR">Cesar</option>
+                        <option value="CÓRDOBA">Córdoba</option>
+                        <option value="CUNDINAMARCA">Cundinamarca</option>
+                        <option value="MAGDALENA">Magdalena</option>
+                        <option value="META">Meta</option>
+                        <option value="NARIÑO">Nariño</option>
+                        <option value="NORTE DE SANTANDER">Norte de Santander</option>
+                        <option value="RISARALDA">Risaralda</option>
+                        <option value="SANTANDER">Santander</option>
+                        <option value="SUCRE">Sucre</option>
+                        <option value="TOLIMA">Tolima</option>
+                        <option value="VALLE DEL CAUCA">Valle del Cauca</option>
+                    </select>
+                
+                    <label for="ciudad">Ciudad</label>
+                    <select id="ciudad">
+                        <option value="">Selecciona una Ciudad</option>
+                    </select>
+                
+                    <button type="submit">Guardar Ubicación</button>
+                </form>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-camas-64.png" alt="">
+                    HABITACIONES
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html" onclick="irADetalles('Base Cama', 'images_ctg/basecama-sublim-ambiente.webp', '$299.992', '$399.990', '-25%', 'Una base cama comoda con excelentes acabados ideal para cualquier habitacion.')">Camas</a>
+                    <a href="catalogo.html" onclick="irADetalles('Litera doble', 'images_ctg/FOTO-PORTADA-LITERAS.jpg', '$1.999.990', '$3.299.990', '-39%', 'Litera doble resistente con diseño elegante ideal para niños y adolescentes.')">Literas</a>
+                    <a href="catalogo.html" onclick="irADetalles('Armario', 'images_ctg/closet-armario-denver-aglomerado-moderno.webp', '$699.991', '799.990', '-13%', 'Armario grande hecho a medida para cualquier espacio.')">Ropero</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-martillo-50.png" alt="">
+                    RESTAURACIÓN DE MUEBLES
+                </button>
+                <div class="dropdown-content">
+                    <!-- Cada enlace pasa los detalles de un producto representativo de la categoría -->
+                    <a href="catalogo.html" onclick="irADetalles('Silla en Madera', 'images_ctg/D_NQ_NP_655928-MCO54766209176_032023-O.webp', '$999.990', '$2.299.990', '-60%', 'Silla moderna en madera de alta calidad, perfecta para complementar la decoración de tu hogar. Ideal para cualquier espacio, ya sea comedor o sala.')">Sillas</a>
+                    <a href="catalogo.html" onclick="irADetalles('Comedor', 'images_ctg/images.jfif', '$1.559.990', '$2.399.990', '-35%', 'Comedor de estilo contemporáneo, perfecto para reunir a la familia en cualquier ocasión.')">Mesas</a>
+                    <a href="catalogo.html" onclick="irADetalles('Sofá gris', 'images_ctg/sofas-grises-sec1.webp', '$1.999.990', '$3.299.990', '-39%', 'Sofá gris de alta resistencia y diseño moderno, ideal para cualquier sala o habitación.')">Sofás</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-cocina-50.png" alt="">
+                    COCINAS
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html">Cocinas integrales</a>
+                    <a href="catalogo.html">Refrigeradores</a>
+                    <a href="catalogo.html">Microondas</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-ducha-y-bañera-50.png" alt="">
+                    BAÑOS Y PLOMERIA
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html">Duchas</a>
+                    <a href="catalogo.html">Lavabos</a>
+                    <a href="catalogo.html">Sanitarios</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-despensa-50.png" alt="">
+                    DECORACIÓN, MENAJE E ILUMINACIÓN
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html">Lámparas</a>
+                    <a href="catalogo.html">Cortinas</a>
+                    <a href="catalogo.html">Cuadros</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-servicios-50.png" alt="">
+                    SERVICIOS Y PROYECTOS
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html">Planificación</a>
+                    <a href="catalogo.html">Decoración</a>
+                    <a href="catalogo.html">Construcción</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="location.href='#'">
+                    <img src="images/icons8-proyectos-50.png" alt="">
+                    PROYECTOS E INSPIRACIÓN
+                </button>
+                <div class="dropdown-content">
+                    <a href="catalogo.html">Proyectos recientes</a>
+                    <a href="catalogo.html">Inspiración</a>
+                    <a href="catalogo.html">Guías</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="SobreNosotros">
+        <h1>Sobre nosotros</h1>
+        <br>
+        <h2 id="conocenos">Conócenos</h2>
+        <div class="contenido">
+            <p>Si tiene alguna consulta sobre sus facturas, órdenes de compra, estados de cuenta o cualquier otra información operativa, puede comunicarse con nuestra línea de atención exclusiva para proveedores o escribirnos al correo: <a href="mailto:correo1@ejemplo.com">[muebles_andrey@gmail.com]</a></p>
+            
+            <p>Si desea presentar una queja o reclamo sobre acuerdos comerciales, condiciones de pago o cualquier incumplimiento del contrato, puede contactarnos en: <a href="mailto:correo2@ejemplo.com">[muebles_andrey@gmail.com]</a></p>
+            
+            <p>Para reportar cualquier conducta que afecte la libre competencia o prácticas comerciales inadecuadas, por favor diríjase a la Defensoría de Proveedores en el correo: <a href="mailto:correo3@ejemplo.com">[muebles_andrey@gmail.com]</a></p>
+        </div>
+
+        <h2 id="faq">Preguntas Frecuentes</h2>
+        <div class="contenido">
+        <p>1. ¿Cuáles son los tiempos de entrega?
+            El tiempo de entrega varía según la ubicación y disponibilidad del producto. En promedio, las entregas locales toman entre 3 y 7 días hábiles, mientras que los envíos nacionales pueden tardar hasta 15 días hábiles.</p>
+            
+        <p>2. ¿Ofrecen garantía en los muebles?
+            Sí, todos nuestros muebles cuentan con garantía. La duración varía según el producto, pero en general ofrecemos una cobertura de 6 a 12 meses por defectos de fabricación.</p>
+            
+        <p>3. ¿Puedo solicitar un mueble personalizado?
+            Sí, ofrecemos servicio de personalización en algunos de nuestros muebles. Puedes contactarnos para discutir detalles como materiales, colores y dimensiones.</p>
+            
+        <p>4. ¿Cuáles son las formas de pago aceptadas?
+            Aceptamos pagos con tarjeta de crédito, débito, transferencias bancarias y pagos en efectivo en algunos puntos autorizados.</p>
+            
+        <p>5. ¿Tienen tienda física?
+            Actualmente operamos principalmente en línea, pero contamos con algunas salas de exhibición en ciudades seleccionadas. Contáctanos para más información.</p>
+        </div>
+        <h2 id="contacto">Contáctanos</h2>
+        <div class="contenido">
+        <p>Si tienes alguna consulta sobre nuestros productos, pedidos o servicios, puedes comunicarte con nosotros a través de los siguientes medios:</p>
+
+        <p>📧 Correo electrónico: contacto@mueblesandrey.com</p>
+        <p>📞 Teléfono/WhatsApp: +57 300 123 4567</p>
+        <p>📍 Dirección: Calle 123 #45-67, Bogotá, Colombia</p>
+            
+        <p>Nuestro horario de atención es de lunes a viernes de 8:00 a.m. a 6:00 p.m. y sábados de 9:00 a.m. a 2:00 p.m.</p>
+            
+        <p>También puedes enviarnos un mensaje a través del formulario en nuestra página web y te responderemos lo antes posible.</p>
+        </div>
+        
+        <h2 id="vende">Vende con Nosotros</h2>
+        <div class="contenido">
+        <p>Si eres fabricante, distribuidor o artesano y deseas vender tus productos en nuestra tienda, nos encantaría trabajar contigo.</p>
+
+        <p>¿Qué ofrecemos?</p>
+        <p>✔️ Un canal de ventas en línea con clientes en todo el país.</p>
+        <p>✔️ Soporte en logística y envíos.</p>
+        <p>✔️ Asesoría para la publicación de tus productos.</p>
+            
+        <p>¿Cómo unirte?</p>
+            
+        <p>Envía un correo a proveedores@mueblesandrey.com con información sobre tus productos. Nuestro equipo revisará tu solicitud y te contactará en un máximo de 5 días hábiles. Si tu propuesta es aprobada, te guiaremos en el proceso de registro y publicación de productos. Únete a nuestra comunidad y lleva tus muebles a más hogares en Colombia.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li><a href="sobre-nosotros.html#conocenos">Conócenos</a></li>
+                    <li><a href="sobre-nosotros.html#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="sobre-nosotros.html#contacto">Contáctanos</a></li>
+                    <li><a href="sobre-nosotros.html#vende">Vende con Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Sobre tus compras</h4>
+                <ul>
+                    <li><a href="#">Pagos</a></li>
+                    <li><a href="#">A Dónde Enviamos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Información Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Garantía</a></li>
+                    <li><a href="#">Política de Envío y Devolución</a></li>
+                    <li><a href="#">Derecho de Retracto</a></li>
+                    <li><a href="#">Política de Datos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>¡Suscríbete a nuestro Newsletter!</h4>
+                <p>Conoce ya todas las sorpresas que tenemos para ti.</p>
+                <form action="#">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <button id="back-to-top" title="Volver arriba">⬆</button>
+    </footer> 
+
+    <div class="floating-btn" onclick="toggleOptions()">
+        <img src="images/whatsapp-873316_640.webp" alt="WhatsApp" style="width: 30px;">
+        <div class="floating-msg">¿Necesitas ayuda? Escríbenos por Wp</div>
+    </div>
+
+    <div class="floating-options" id="floatingOptions">
+        <a href="https://www.facebook.com/edinsongiovany.gutierrez?mibextid=ZbWKwL" class="floating-option">Facebook</a>
+        <a href="https://www.instagram.com/mueblesandrey?igsh=dTc3aWUyYTQyaHR3" class="floating-option">Instagram</a>
+        <a href="https://wa.me/3142668830?text=Hola%20estoy%20interesado%20en%20sus%20productos,%20quiero%20saber%20mas%20informacion" class="floating-option">Mensaje</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left .5s;
+}
+
+button{
+
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: black;
+    cursor: pointer;
+    color: #111;
+    transition: background-color .4s;
+    border-radius: 13px;
+    border: none;
+    border: 1px solid #6F4F28;
+    color: white;
+}
+
+button:hover {
+
+    color: white;
+    background-color: #6F4F28;
+
+}
+
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #553d20;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    background-image: url(.image/logo_iniciales.png) no-repeat center;
+}
+
+.closebtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f1f1f1;
+    padding: 10px 10px;
+    border-radius: 9px;
+    border: 0;
+    margin-left: 70%;
+    margin-top: 5px;
+}
+
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 9px;
+    visibility: visible;
+
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.sidebar a:hover{
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    background-color:#8d6f4a;
+    margin: 0px 15px 15px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.openbtn:hover{
+    background-color: #6F4F28;
+}
+
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
+}

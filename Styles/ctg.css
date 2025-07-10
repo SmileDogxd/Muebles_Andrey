@@ -1,0 +1,369 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+#logo {
+    max-height: 70px;
+    width: auto; 
+    cursor: pointer;
+}
+
+.catalogo {
+    text-align: center;
+    padding: 20px;
+}
+
+.catalogo h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.catalogo p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.precio-antiguo {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.precio {
+    font-size: 20px;
+    color: #e74c3c;
+}
+
+.descuento {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #00bcd4;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.etiqueta.personalizado {
+    background-color: #ff9800;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f05622;
+}
+
+.footer-section form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-section form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.footer-section form button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.footer-section form button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.related-products {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.related-products h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.related-products p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Detalles del producto */
+.product-details {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.product-gallery {
+    width: 50%;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #a82323;
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.new-price {
+    color: #e74c3c;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-top: 5px;
+}
+
+.discount {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.delivery-time {
+    margin: 10px 0;
+    color: #555;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.quantity-btn {
+    color: white;
+    background-color: #c0a788;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #ad885a;
+}
+
+#quantity {
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn {
+    background-color: #6F4F28;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #9c713f ;
+}
+
+.wishlist-compare {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.wishlist-btn, .compare-btn {
+    background-color: #c0a788;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.wishlist-btn:hover, .compare-btn:hover {
+    background-color: #ad885a;
+}
+
+.categories {
+    margin-top: 20px;
+    color: #666;
+}
+
+.share-icons {
+    margin-top: 10px;
+}
+
+.share-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.share-icons img:hover {
+    opacity: 0.7;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    border-top: 2px solid #ddd;
+    font-family: "Rubik", sans-serif;
+}
